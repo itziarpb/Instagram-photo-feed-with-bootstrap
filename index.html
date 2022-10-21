@@ -4,88 +4,136 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Instagram photo feed with Bootstrap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   </head>
   <body class="bg-dark">
     <div class="container bg-white">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                     Instagram</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li>
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Create a new post</button>  
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">Caption:
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                                    <label for="floatingTextarea2">Add the caption of your post here</label>
-                                  </div>
-                                  <button type="button" class="btn btn-light">camara</button>
-                                  <button type="button" class="btn btn-light">gps</button>
-                            </div>
-                            <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-success">Publish</button>
-                            </div>
+
+      <!--Inicio navbar-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <i class="fab fa-instagram"></i>
+            Instagram</a>
+          <!--Boton del menu colapsado-->  
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!--Elementos del menu colapsado-->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <!--Modal-->
+              <li>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Create a new post</button>  
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                        <button type="button" class="btn-close" data-bs-dimdiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">Caption:
+                        <div class="form-floating">
+                          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                          <label for="floatingTextarea2">Add the caption of your post here</label>
                         </div>
-                        </div>
+                        <button type="button" class="btn btn-light">camara</button>
+                        <button type="button" class="btn btn-light">gps</button>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dimdiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Publish</button>
+                      </div>
                     </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Profile</a></li>
-                      <li><a class="dropdown-item" href="#">Accesibility</a></li>
-                      <li><a class="dropdown-item" href="#">Privacity and Data</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
-                    </ul>
-                  </li>
+                  </div>
+                </div>                
+              </li>
+              <!--Dropdown-->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">post</a></li>
+                  <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                  <li><a class="dropdown-item" href="#">Privacity and Data</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
                 </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav><!--fin del navbar-->
+
+      <!--Inicio pestañas-->
+      <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-grid-tab" data-bs-toggle="pill" 
+                  data-bs-target="#pills-grid" type="button" role="tab" aria-controls="pills-grid" 
+                  aria-selected="true">grid</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-post-tab" data-bs-toggle="pill" 
+                  data-bs-target="#pills-post" type="button" role="tab" aria-controls="pills-post" 
+                  aria-selected="false">post</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-grid" role="tabpanel" aria-labelledby="pills-grid-tab">
+          <div class="row">
+            <div class="col-12 col-md-4 p-1 mb-2">
+              <img src="https://picsum.photos/id/237/365/300" alt="">
+            </div>
+            <div class="col-12 col-md-4 p-1 mb-2">
+              <img src="https://picsum.photos/id/1003/365/300" alt="">
+            </div>
+            <div class="col-12 col-md-4 p-1 mb-2">
+              <img src="https://picsum.photos/seed/picsum/365/300" alt="">
+            </div>
+            <div class="col-12 col-md-4 p-1 mb-2">
+              <img src="https://picsum.photos/id/1018/365/300" alt="">
+            </div>
+            <div class="col-12 col-md-4 p-1 mb-2">
+              <img src="https://picsum.photos/id/1019/365/300" alt="">
+            </div>
+            <div class="col-12 col-md-4 p-1 mb-2">
+              <img src="https://picsum.photos/id/1020/365/300" alt="">
+            </div>
+            <div class="col-12 col-md-4 p-1 mb-2">
+              <img src="https://picsum.photos/id/1029/365/300" alt="">
+            </div>
+            <div class="col-12 col-md-4 p-1 mb-2">
+              <img src="https://picsum.photos/id/1048/365/300" alt="">
+            </div>
+            <div class="col-12 col-md-4 p-1 mb-2">
+              <img src="https://picsum.photos/id/1067/365/300" alt="">
+            </div>        
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-post" role="tabpanel" aria-labelledby="pills-post-tab">
+          <div class="container justify-content-center">
+            <div class="col-8 ">
+              <div class="card ">
+                <div class="card-body">
+                  cabecera
+                </div>
+                <img src="https://picsum.photos/id/237/365/300" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
               </div>
             </div>
-          </nav>
-            <!--pestañas-->
-          <ul class="nav nav-tabs justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#fotos3x3">Active</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" active" aria-current="page" href="#fotos1a1">Link</a>
-            </li>
-          </ul>
-          <!--imagenes 3x3-->
-          <div id="fotos3x3" class="row">
-            <div class="col-12 col-sm-4  bg-primary">foto1</div>
-            <div class="col-12 col-sm-4  bg-secondary">foto2</div>
-            <div class="col-12 col-sm-4  bg-success">foto3</div>
-            <div class="col-12 col-sm-4  bg-danger">foto4</div>
-            <div class="col-12 col-sm-4  bg-warning">foto5</div>
-            <div class="col-12 col-sm-4  bg-info">foto6</div>
-            <div class="col-12 col-sm-4  bg-primary">foto7</div>
-            <div class="col-12 col-sm-4  bg-secondary">foto8</div>
-            <div class="col-12 col-sm-4  bg-danger">foto9</div>
           </div>
-        <!--imagenes 1-->
-        <div id="fotos1a1" class="row">
-            <div class="col-12  bg-warning">post</div>
-            
         </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>
