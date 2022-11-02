@@ -34,7 +34,7 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
-                        <button type="button" class="btn-close" data-bs-dimdiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">Caption:
                         <div class="form-floating">
@@ -45,7 +45,7 @@
                         <button type="button" class="btn btn-light"><i class="fas fa-map-marker-alt"></i></button>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dimdiss="modal">Close</button>
+                        <button id='closeModal' type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-success">Publish</button>
                       </div>
                     </div>
@@ -84,6 +84,7 @@
                   aria-selected="false"><i class="fas fa-square"></i></button>
         </li>
       </ul>
+      <!--Contenido primera pestaña-->
       <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-grid" role="tabpanel" aria-labelledby="pills-grid-tab">
           <div class="row">
